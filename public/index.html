@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozinha-ON</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/scripts/slider.js">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Cozinha-ON</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Contato.html">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Sobre.html">Sobre</a></li>
+                    </ul>
+                    <form class="d-flex login">
+                        <input class="form-control me-2" type="email" placeholder="Email" required>
+                        <input class="form-control me-2" type="password" placeholder="Senha" required>
+                        <button class="btn btn-success" type="submit">Login</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SLIDER PRINCIPAL (NOVO) -->
+    <div class="main-slider-container">
+        <div class="main-slider">
+            <div class="main-slide">
+                <a href="paoqueijo.html">
+                    <img src="pao.webp" alt="Pão de Queijo" class="img-fluid">
+                    <div class="slide-caption">
+                        <h3>Pão de Queijo</h3>
+                        <p>Receita tradicional mineira</p>
+                    </div>
+                </a>
+            </div>
+            <div class="main-slide">
+                <a href="torta-frango.html">
+                    <img src="torta-frango (1).jpg" alt="Torta de Frango" class="img-fluid">
+                    <div class="slide-caption">
+                        <h3>Torta de Frango</h3>
+                        <p>Clássico da culinária brasileira</p>
+                    </div>
+                </a>
+            </div>
+            <div class="main-slide">
+                <a href="caprese-berinjela.html">
+                    <img src="caprese (1).jpg" alt="Caprese de Berinjela" class="img-fluid">
+                    <div class="slide-caption">
+                        <h3>Caprese de Berinjela</h3>
+                        <p>Opção vegetariana deliciosa</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="slider-nav">
+            <div class="slider-dot active"></div>
+            <div class="slider-dot"></div>
+            <div class="slider-dot"></div>
+        </div>
+    </div>
+
+    <!-- Receitas do dia -->
+    <div class="container mt-4">
+        
+        <img class="destaque d-block mx-auto" src="Cozinha on.jpg" alt="">
+
+        <main class="row justify-content-center" id="receitas-container">
+            <!-- Cards de receitas inseridos via app.js -->
+        </main>
+
+        <!-- Slider de receitas relacionadas -->
+        <section class="slider-receitas">
+            <h2 class="text-center text-light mb-4">Mais Receitas para Experimentar</h2>
+            <div class="slider-container" id="slider-relacionadas">
+                <!-- Itens preenchidos via JavaScript -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Barra lateral -->
+    <aside class="bg-dark text-light p-3 rounded position-fixed top-50 end-0 translate-middle-y d-none d-md-block">
+        <h3 class="text-center">CATEGORIAS</h3>
+        <ul class="list-unstyled">
+            <li><a class="text-light" href="Café.html">Café</a></li>
+            <li><a class="text-light" href="Almoço.html">Almoço</a></li>
+            <li><a class="text-light" href="Janta.html">Janta</a></li>
+            <li><a class="text-light" href="Lanches.html">Lanches</a></li>
+            <li><a class="text-light" href="Sobremesa.html">Sobremesa</a></li>
+        </ul>
+    </aside>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-center text-light p-3 mt-5">
+        <h4>CIE SINCE 2018. TODOS OS DIREITOS RESERVADOS©</h4>
+        <article class="titulo-pesquisa">Procure aqui uma receita!</article>
+        <form class="d-flex justify-content-center">
+            <input class="form-control w-50" type="text" placeholder="Pesquisar..." name="pesquisa">
+            <button class="btn btn-success ms-2" type="submit">Pesquisar</button>
+        </form>
+        <a href="detalhes.html" class="btn btn-outline-light mt-3">Mais sobre o site</a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/scripts/app.js"></script>
+    <script src="assets/scripts/slider.js"></script>
+    
+    <!-- Script para o slider principal -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configuração do slider principal
+            const mainSlider = document.querySelector('.main-slider');
+            const slides = document.querySelectorAll('.main-slide');
+            const dots = document.querySelectorAll('.main-slider-container .slider-dot');
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+            
+            function showSlide(index) {
+                mainSlider.style.transform = `translateX(-${index * 100}%)`;
+                
+                // Atualiza os dots
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
+                
+                currentSlide = index;
+            }
+            
+            // Auto slide change
+            setInterval(() => {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                showSlide(currentSlide);
+            }, 4000);
+            
+            // Click nos dots
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSlide(index);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

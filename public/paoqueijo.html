@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pão de Queijo - Cozinha-ON</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        /* ESTILOS DA PÁGINA DE RECEITA */
+        body {
+            background-color: rgb(6, 56, 33);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top: 70px;
+        }
+
+        .receita-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: rgb(43, 56, 46);
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .receita-container h1 {
+            color: rgb(25, 219, 106);
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 2.5rem;
+        }
+
+        .receita-container img {
+            border-radius: 15px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 25px;
+            border: 3px solid rgb(25, 219, 106);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .receita-container img:hover {
+            transform: scale(1.03);
+        }
+
+        .receita-container h3 {
+            color: rgb(25, 219, 106);
+            margin-top: 25px;
+            border-bottom: 2px solid;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        .receita-container ul, 
+        .receita-container ol {
+            padding-left: 20px;
+            line-height: 1.6;
+        }
+
+        .receita-container li {
+            margin-bottom: 8px;
+        }
+
+        .btn-voltar {
+            display: block;
+            width: fit-content;
+            margin: 40px auto 0;
+            background-color: rgb(25, 219, 106);
+            color: black;
+            font-weight: bold;
+            padding: 10px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            font-size: 1.1rem;
+        }
+
+        .btn-voltar:hover {
+            background-color: rgb(20, 180, 90);
+            transform: scale(1.05);
+            color: white;
+        }
+
+        /* ESTILOS DO SLIDER (consistentes com o style.css) */
+        .slider-receitas {
+            background-color: rgb(43, 56, 46);
+            border-radius: 16px;
+            padding: 25px;
+            margin: 50px 0 20px;
+            border-top: 2px solid rgb(25, 219, 106);
+        }
+
+        .slider-receitas h3 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: rgb(25, 219, 106);
+            font-size: 1.8rem;
+        }
+
+        .slider-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 25px;
+            padding-bottom: 15px;
+            scrollbar-width: none;
+        }
+
+        .slider-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .receita-slide {
+            min-width: 250px;
+            scroll-snap-align: start;
+            transition: transform 0.3s;
+        }
+
+        .receita-slide:hover {
+            transform: translateY(-5px);
+        }
+
+        .receita-slide img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 2px solid rgb(25, 219, 106);
+        }
+
+        .receita-slide h4 {
+            text-align: center;
+            margin-top: 10px;
+            color: white;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar (igual ao index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Cozinha-ON</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contato.html">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Sobre.html">Sobre</a></li>
+                </ul>
+                <form class="d-flex login">
+                    <input class="form-control me-2" type="email" placeholder="Email" required>
+                    <input class="form-control me-2" type="password" placeholder="Senha" required>
+                    <button class="btn btn-success" type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo principal da receita -->
+    <div class="receita-container">
+        <h1>Pão de Queijo</h1>
+        <img src="pao.webp" alt="Foto de pão de queijo">
+
+        <h3>Ingredientes:</h3>
+        <ul>
+            <li>500g de polvilho azedo</li>
+            <li>250g de queijo minas padrão ralado</li>
+            <li>100g de queijo parmesão ralado</li>
+            <li>1 ovo</li>
+            <li>1/2 xícara de leite</li>
+            <li>1/2 xícara de óleo</li>
+            <li>1 colher de chá de sal</li>
+        </ul>
+
+        <h3>Modo de Preparo:</h3>
+        <ol>
+            <li>Preaqueça o forno a 180°C</li>
+            <li>Misture todos os ingredientes em uma tigela até formar uma massa homogênea</li>
+            <li>Molde bolinhas e coloque em uma assadeira untada</li>
+            <li>Asse por 20 a 25 minutos ou até dourar levemente</li>
+        </ol>
+
+        <!-- Slider de receitas relacionadas -->
+        <div class="slider-receitas">
+            <h3>Experimente também:</h3>
+            <div class="slider-container" id="slider-relacionadas">
+                <!-- Itens serão preenchidos pelo slider.js -->
+            </div>
+        </div>
+
+        <a href="index.html" class="btn btn-voltar">⬅ Voltar para a página inicial</a>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-center text-light p-3 mt-5">
+        <h4>CIE SINCE 2018. TODOS OS DIREITOS RESERVADOS©</h4>
+        <article class="titulo-pesquisa">Procure aqui uma receita!</article>
+        <form class="d-flex justify-content-center">
+            <input class="form-control w-50" type="text" placeholder="Pesquisar..." name="pesquisa">
+            <button class="btn btn-success ms-2" type="submit">Pesquisar</button>
+        </form>
+        <a href="detalhes.html" class="btn btn-outline-light mt-3">Mais sobre o site</a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="slider.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+
+{
+  "receitas": [
+    {
+      "id": 1,
+      "titulo": "Pão de Queijo",
+      "descricao": "Receita tradicional mineira, crocante por fora e macia por dentro.",
+      "imagem": "pao.webp"
+    },
+    {
+      "id": 2,
+      "titulo": "Torta de Frango",
+      "descricao": "Uma torta cremosa e cheia de sabor para qualquer refeição.",
+      "imagem": "torta-frango.jpg"
+    },
+    {
+      "id": 3,
+      "titulo": "Caprese de Berinjela",
+      "descricao": "Uma alternativa leve e deliciosa para vegetarianos.",
+      "imagem": "caprese.jpg"
+    }
+  ]
+}
