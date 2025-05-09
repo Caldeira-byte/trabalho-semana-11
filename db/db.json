@@ -1,4 +1,3 @@
-
 {
   "receitas": [
     {
@@ -11,13 +10,25 @@
       "id": 2,
       "titulo": "Torta de Frango",
       "descricao": "Uma torta cremosa e cheia de sabor para qualquer refeição.",
-      "imagem": "torta-frango.jpg"
+      "imagem": "torta-frango (1).jpg"
     },
     {
       "id": 3,
       "titulo": "Caprese de Berinjela",
       "descricao": "Uma alternativa leve e deliciosa para vegetarianos.",
-      "imagem": "caprese.jpg"
+      "imagem": "caprese (1).jpg"
+    },
+    {
+      "id": 4,
+      "titulo": "Brigadeiro",
+      "descricao": "Doce brasileiro feito com leite condensado, chocolate e manteiga.",
+      "imagem": "brigadeiro.jpg"
+    },
+    {
+      "id": 5,
+      "titulo": "Macarrão com Carne",
+      "descricao": "Macarrão ao molho suculento com carne moída bem temperada.",
+      "imagem": "macarraocarne.jpg"
     }
   ]
 }
