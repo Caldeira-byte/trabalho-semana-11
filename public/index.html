@@ -2,146 +2,237 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cozinha-ON</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <meta charset="utf-8">
+  <title>Cozinha on</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/public/assets/css/style1.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-    <!-- Cabeçalho -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Cozinha-ON</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Contato.html">Contato</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Sobre.html">Sobre</a></li>
-                    </ul>
-                    <form class="d-flex login">
-                        <input class="form-control me-2" type="email" placeholder="Email" required>
-                        <input class="form-control me-2" type="password" placeholder="Senha" required>
-                        <button class="btn btn-success" type="submit">Login</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-    </header>
 
-    <!-- SLIDER PRINCIPAL -->
-    <div class="main-slider-container">
-        <div class="main-slider">
-            <div class="main-slide">
-                <a href="paoqueijo.html">
-                    <img src="pao.webp" alt="Pão de Queijo" class="img-fluid">
-                    <div class="slide-caption">
-                        <h3>Pão de Queijo</h3>
-                        <p>Receita tradicional mineira</p>
-                    </div>
-                </a>
-            </div>
-            <div class="main-slide">
-                <a href="torta-frango.html">
-                    <img src="torta-frango (1).jpg" alt="Torta de Frango" class="img-fluid">
-                    <div class="slide-caption">
-                        <h3>Torta de Frango</h3>
-                        <p>Clássico da culinária brasileira</p>
-                    </div>
-                </a>
-            </div>
-            <div class="main-slide">
-                <a href="caprese-berinjela.html">
-                    <img src="caprese (1).jpg" alt="Caprese de Berinjela" class="img-fluid">
-                    <div class="slide-caption">
-                        <h3>Caprese de Berinjela</h3>
-                        <p>Opção vegetariana deliciosa</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="slider-nav">
-            <div class="slider-dot active"></div>
-            <div class="slider-dot"></div>
-            <div class="slider-dot"></div>
-        </div>
-    </div>
+  <header class="header d-flex flex-wrap justify-content-between align-items-center p-3">
+    <a href="#"><img src="/public/assets/img/Cozinha on.jpg" alt="Logo" class="logo-canto-esquerdo"></a>
 
-    <!-- Receitas do dia -->
-    <div class="container mt-4">
-        <img class="destaque d-block mx-auto" src="Cozinha on.jpg" alt="">
+    <!-- barra de filtro de categorias 
+    <div class="filtro-categorias">
 
-        <main class="row justify-content-center" id="receitas-container">
-            <!-- Cards serão adicionados via app.js com fetch -->
-        </main>
+      <div class="filtragem" role="group" aria-label="Categorias">
+        <button class="btn btn-secondary" onclick="filtrarPorCategoria('Lanche')">Lanches</button>
+        <button class="btn btn-secondary" onclick="filtrarPorCategoria('Almoço')">Almoços</button>
+        <button class="btn btn-secondary" onclick="filtrarPorCategoria('Sobremesa')">Sobremesas</button>
+        <button class="btn btn-secondary" onclick="filtrarPorCategoria()">Todos</button>
+      </div>
+    </div> -->
 
-        <!-- Slider de receitas relacionadas -->
-        <section class="slider-receitas">
-            <h2 class="text-center text-light mb-4">Mais Receitas para Experimentar</h2>
-            <div class="slider-container" id="slider-relacionadas">
-                <!-- Conteúdo dinâmico futuro -->
-            </div>
-        </section>
-    </div>
-
-    <!-- Barra lateral -->
-    <aside class="bg-dark text-light p-3 rounded position-fixed top-50 end-0 translate-middle-y d-none d-md-block">
-        <h3 class="text-center">CATEGORIAS</h3>
-        <ul class="list-unstyled">
-            <li><a class="text-light" href="Café.html">Café</a></li>
-            <li><a class="text-light" href="Almoço.html">Almoço</a></li>
-            <li><a class="text-light" href="Janta.html">Janta</a></li>
-            <li><a class="text-light" href="Lanches.html">Lanches</a></li>
-            <li><a class="text-light" href="Sobremesa.html">Sobremesa</a></li>
-        </ul>
-    </aside>
-
-    <!-- Rodapé -->
-    <footer class="bg-dark text-center text-light p-3 mt-5">
-        <h4>CIE SINCE 2018. TODOS OS DIREITOS RESERVADOS©</h4>
-        <article class="titulo-pesquisa">Procure aqui uma receita!</article>
-        <form class="d-flex justify-content-center">
-            <input class="form-control w-50" type="text" placeholder="Pesquisar..." name="pesquisa">
-            <button class="btn btn-success ms-2" type="submit">Pesquisar</button>
+    <!-- menu cadastro -->
+    <div class="menu-cadastro">
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <nav class="menu-content">
+        <form>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="senha">Senha:</label>
+          <input type="password" id="senha" name="senha" required>
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" name="telefone" required>
+          <button type="submit">Cadastrar</button>
         </form>
-        <a href="detalhes.html" class="btn btn-outline-light mt-3">Mais sobre o site</a>
-    </footer>
+      </nav>
+    </div>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/scripts/app.js"></script>
-    <script src="assets/scripts/slider.js"></script>
+    <!-- menu navegação -->
+    <nav>
+      <ul class="menu nav">
+        <li class="nav-item"><a class="nav-link text-white" href="Home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="Sobre.html">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="serviços.html">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="Contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Script do slider -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const mainSlider = document.querySelector('.main-slider');
-            const slides = document.querySelectorAll('.main-slide');
-            const dots = document.querySelectorAll('.main-slider-container .slider-dot');
-            let currentSlide = 0;
-            const totalSlides = slides.length;
 
-            function showSlide(index) {
-                mainSlider.style.transform = `translateX(-${index * 100}%)`;
-                dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
-                currentSlide = index;
-            }
+  <!-- banner lateral  -->
+  <div class="banner-lateral d-none d-lg-block">
+    <img src="/public/assets/img/banner.png" alt="Banner de culinária">
+    <div class="texto-intro mt-2">
+      <p>Bem-vindo ao cozinha on - o seu espaço digital para explorar receitas deliciosas e práticas para o dia a dia!</p>
+    </div>
+  </div>
 
-            setInterval(() => {
-                currentSlide = (currentSlide + 1) % totalSlides;
-                showSlide(currentSlide);
-            }, 4000);
 
-            dots.forEach((dot, index) => {
-                dot.addEventListener('click', () => showSlide(index));
-            });
-        });
-    </script>
+
+
+
+  <div class="container my-5">
+    <h2 class="titulo-receitas-principais text-center">Receitas Famosas</h2>
+    <div id="carouselReceitasFamosas" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+  
+        <!-- Receita 1 -->
+        <div class="carousel-item active">
+          <div class="card mx-auto" style="max-width: 600px;">
+            <img src="/public/assets/img/lasanha-frango.webp" class="d-block w-100" alt="Lasanha de Frango"> <!-- Imagem da receita -->
+            <div class="card-body text-center">
+              <h5 class="card-title">Lasanha de Frango</h5>
+              <p class="card-text">Camadas de massa com frango desfiado e molho branco.</p>
+              <a href="detalhes.html?id=101" class="btn btn-primary">Ver Receita</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Receita 2 -->
+        <div class="carousel-item">
+          <div class="card mx-auto" style="max-width: 600px;">
+            <img src="/public/assets/img/torta-limao.jpg" class="d-block w-100" alt="Torta de Limão"> <!-- Imagem da receita -->
+            <div class="card-body text-center">
+              <h5 class="card-title">Torta de Limão</h5>
+              <p class="card-text">Base crocante, recheio cremoso e cobertura de merengue.</p>
+              <a href="detalhes.html?id=102" class="btn btn-primary">Ver Receita</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Receita 3 -->
+        <div class="carousel-item">
+          <div class="card mx-auto" style="max-width: 600px;">
+            <img src="/public/assets/img/coxinha-frango.webp" class="d-block w-100" alt="Coxinha de Frango"> <!-- Imagem da receita -->
+            <div class="card-body text-center">
+              <h5 class="card-title">Coxinha de Frango</h5>
+              <p class="card-text">Salgado brasileiro recheado com frango temperado.</p>
+              <a href="detalhes.html?id=103" class="btn btn-primary">Ver Receita</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Receita 4 -->
+        <div class="carousel-item">
+          <div class="card mx-auto" style="max-width: 600px;">
+            <img src="/public/assets/img/escondidinho-carne.jpg" class="d-block w-100" alt="Escondidinho de Carne Seca"> <!-- Imagem da receita -->
+            <div class="card-body text-center">
+              <h5 class="card-title">Escondidinho de Carne Seca</h5>
+              <p class="card-text">Purê de mandioca com carne seca refogada.</p>
+              <a href="detalhes.html?id=104" class="btn btn-primary">Ver Receita</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Receita 5 -->
+        <div class="carousel-item">
+          <div class="card mx-auto" style="max-width: 600px;">
+            <img src="/public/assets/img/mousse-maracuja.webp" class="d-block w-100" alt="Mousse de Maracujá"> <!-- Imagem da receita -->
+            <div class="card-body text-center">
+              <h5 class="card-title">Mousse de Maracujá</h5>
+              <p class="card-text">Sobremesa leve e azedinha feita com suco de maracujá.</p>
+              <a href="detalhes.html?id=105" class="btn btn-primary">Ver Receita</a>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselReceitasFamosas" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselReceitasFamosas" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
+    </div>
+  </div>
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  <!-- receitas do dia  -->
+  <div class="container">
+    <h1 class="receitasdia text-center my-4">RECEITAS DO DIA</h1>
+    <div class="row g-4" id="container-cards">
+
+    </div>
+  </div>
+
+  <!-- CATEGORIAS  -->
+  <div class="container mt-5">
+    <h2 class="text-center mb-4"></h2>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-4">
+        <a href="cafe.html" class="card-categoria">
+          <img src="/public/assets/img/breakfastpng.webp" class="img-fluid">
+          <p>Café da Manhã</p>
+        </a>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <a href="almoco.html" class="card-categoria">
+          <img src="/public/assets/img/almoçopng.webp" class="img-fluid">
+          <p>Almoço</p>
+        </a>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <a href="lanches.html" class="card-categoria">
+          <img src="/public/assets/img/lanchespng.webp" class="img-fluid">
+          <p>Lanches</p>
+        </a>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <a href="janta.html" class="card-categoria">
+          <img src="/public/assets/img/jantapng.webp" class="img-fluid">
+          <p>Janta</p>
+        </a>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <a href="sobremesas.html" class="card-categoria">
+          <img src="/public/assets/img/sobremesaspng.webp" class="img-fluid">
+          <p>Sobremesas</p>
+        </a>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <a href="bebidas.html" class="card-categoria">
+          <img src="/public/assets/img/bebidaspng.webp" class="img-fluid">
+          <p>Bebidas</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- rodape -->
+  <footer class="footer mt-auto">
+    <p><a href="instagram.html">Cozinha on </a></p>
+    <a href="detalhes.html">Ver detalhes</a>
+    </p>
+  </footer>
+
+  <!-- menu fixo lateral -->
+  <div class="menu-fixo">
+    <a href="caldos.html">Caldos</a>
+    <a href="frios.html">Frios</a>
+    <a href="maisfaceis.html">Mais Fáceis</a>
+  </div>
+
+  <!-- barra de pesquisa -->
+  <div class="barra-pesquisa">
+    <input type="text" placeholder="Buscar...">
+    <button>OK</button>
+  </div>
+
+
+
+
+
+  <!-- script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/public/assets/scripts/app.js"></script>
 </body>
+
 </html>
