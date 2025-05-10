@@ -3,32 +3,239 @@
     {
       "id": 1,
       "titulo": "Pão de Queijo",
-      "descricao": "Receita tradicional mineira, crocante por fora e macia por dentro.",
-      "imagem": "pao.webp"
+      "imagem": "/public/assets/img/pao.webp",
+      "descricao": "Tradicional mineiro, crocante por fora e macio por dentro.",
+      "categoria": "Lanche",
+      "ingredientes": [
+        "500g de polvilho doce",
+        "250ml de leite",
+        "100ml de óleo",
+        "2 ovos",
+        "200g de queijo minas ralado"
+      ],
+      "preparo": "Misture o polvilho com o leite e o óleo aquecidos até formar uma farofa. Espere esfriar um pouco e adicione os ovos um a um, mexendo bem. Junte o queijo ralado e misture até ficar homogêneo. Modele bolinhas com as mãos untadas, coloque em uma assadeira e leve ao forno pré-aquecido a 180°C por cerca de 30 minutos ou até dourar levemente.",
+      "fotos": [
+        { "src": "/public/assets/img/paoq1.webp", "titulo": "Pronto para servir" }
+      ]
     },
     {
       "id": 2,
-      "titulo": "Torta de Frango",
-      "descricao": "Uma torta cremosa e cheia de sabor para qualquer refeição.",
-      "imagem": "torta-frango (1).jpg"
+      "titulo": "Macarrão à Bolonhesa",
+      "imagem": "/public/assets/img/macarrao2.jpg",
+      "descricao": "Massa com molho de tomate e carne moída.",
+      "categoria": "Almoço",
+      "ingredientes": [
+        "500g de macarrão",
+        "300g de carne moída",
+        "1 lata de molho de tomate",
+        "Cebola, alho e temperos a gosto"
+      ],
+      "preparo": "Cozinhe o macarrão em água fervente com sal até ficar al dente, escorra e reserve. Em uma panela, refogue a cebola e o alho até dourarem, adicione a carne moída e cozinhe até ela perder a cor crua. Acrescente o molho de tomate, misture bem e deixe apurar por alguns minutos. Acerte os temperos e sirva o molho por cima do macarrão.",
+      "fotos": [
+        { "src": "/public/assets/img/mac1.jpeg", "titulo": "Pronto para servir" }
+      ]
     },
     {
       "id": 3,
-      "titulo": "Caprese de Berinjela",
-      "descricao": "Uma alternativa leve e deliciosa para vegetarianos.",
-      "imagem": "caprese (1).jpg"
+      "titulo": "Brigadeiro",
+      "imagem": "/public/assets/img/brigadeiro.jpg",
+      "descricao": "Doce brasileiro feito com leite condensado e chocolate.",
+      "categoria": "Sobremesa",
+      "ingredientes": [
+        "1 lata de leite condensado",
+        "2 colheres de chocolate em pó",
+        "1 colher de manteiga",
+        "Chocolate granulado"
+      ],
+      "preparo": "Em uma panela, coloque o leite condensado, o chocolate em pó e a manteiga. Leve ao fogo baixo, mexendo sempre com uma colher de pau ou espátula, até desgrudar do fundo da panela. Transfira a mistura para um prato untado e deixe esfriar. Depois, com as mãos untadas, enrole os brigadeiros e passe no granulado.",
+      "fotos": [
+        { "src": "/public/assets/img/brigadeiro1.webp", "titulo": "Pronto para servir" }
+      ]
     },
     {
       "id": 4,
-      "titulo": "Brigadeiro",
-      "descricao": "Doce brasileiro feito com leite condensado, chocolate e manteiga.",
-      "imagem": "brigadeiro.jpg"
+      "titulo": "Bolo de Cenoura",
+      "imagem": "/public/assets/img/bolo-cenoura.jpg",
+      "descricao": "Bolo fofinho com cobertura de chocolate.",
+      "categoria": "Sobremesa",
+      "ingredientes": [
+        "4 cenouras médias",
+        "3 ovos",
+        "2 xícaras de açúcar",
+        "2 xícaras de farinha de trigo",
+        "1 xícara de óleo",
+        "1 colher de fermento em pó"
+      ],
+      "preparo": "No liquidificador, bata as cenouras picadas, os ovos e o óleo até formar um creme liso. Em uma tigela, misture o açúcar, a farinha e o fermento. Adicione o creme de cenoura e misture até a massa ficar uniforme. Despeje em uma forma untada e leve ao forno pré-aquecido a 180°C por cerca de 40 minutos ou até dourar. Cubra com uma calda de chocolate, se desejar.",
+      "fotos": [
+        { "src": "/public/assets/img/bolo1.jpg", "titulo": "Pronto para servir" }
+      ]
     },
     {
       "id": 5,
-      "titulo": "Macarrão com Carne",
-      "descricao": "Macarrão ao molho suculento com carne moída bem temperada.",
-      "imagem": "macarraocarne.jpg"
+      "titulo": "Feijoada",
+      "imagem": "/public/assets/img/feijoada.jpg",
+      "descricao": "Feijão preto com carne de porco e arroz.",
+      "categoria": "Almoço",
+      "ingredientes": [
+        "500g de feijão preto",
+        "300g de carne de porco",
+        "1 cebola",
+        "2 dentes de alho",
+        "Folha de louro",
+        "Arroz para acompanhar"
+      ],
+      "preparo": "Deixe o feijão de molho por pelo menos 8 horas. Em uma panela de pressão, cozinhe o feijão com as carnes defumadas e uma folha de louro por cerca de 30 minutos. Em outra panela, refogue a cebola e o alho e adicione à feijoada. Cozinhe por mais alguns minutos até o caldo engrossar. Sirva com arroz branco, farofa e couve refogada.",
+      "fotos": [
+        { "src": "/public/assets/img/feijoada1.jpg", "titulo": "Pronto para servir" }
+      ]
+    },
+    {
+      "id": 6,
+      "titulo": "Pizza de Calabresa",
+      "imagem": "/public/assets/img/pizza-calabresa.jpg",
+      "descricao": "Pizza de massa fina com calabresa e queijo.",
+      "categoria": "Lanche",
+      "ingredientes": [
+        "1 massa de pizza",
+        "200g de calabresa fatiada",
+        "200g de queijo mussarela",
+        "Molho de tomate",
+        "Orégano a gosto"
+      ],
+      "preparo": "Abra a massa de pizza em uma assadeira untada. Espalhe o molho de tomate por cima. Distribua as fatias de calabresa, cubra com o queijo e finalize com orégano a gosto. Leve ao forno pré-aquecido a 220°C por aproximadamente 20 minutos ou até o queijo derreter e a massa dourar.",
+      "fotos": [
+        { "src": "/public/assets/img/pizza1.webp", "titulo": "Pronto para servir" }
+      ]
+    }
+  ],
+  "famosas": [
+    {
+      "id": 101,
+      "titulo": "Lasanha de Frango",
+      "imagem": "/public/assets/img/lasanha-frango.webp",
+      "tipo": "Prato principal",
+      "ingredientes": [
+        "500g de frango desfiado",
+        "Massa para lasanha",
+        "Molho de tomate",
+        "Queijo mussarela",
+        "Creme de leite",
+        "Temperos a gosto"
+      ],
+      "preparo": [
+        "Refogue o frango com temperos a gosto.",
+        "Misture o frango refogado com o molho de tomate e o creme de leite.",
+        "Em um refratário, alterne camadas de massa de lasanha, molho com frango e queijo mussarela.",
+        "Finalize com queijo mussarela por cima.",
+        "Leve ao forno pré-aquecido a 180°C por cerca de 40 minutos até gratinar."
+      ],
+      "rendimento": "8 porções",
+      "dificuldade": "Média",
+      "descricao": "Massa leve, recheio cremoso e muito sabor.",
+      "fotos": [
+        { "src": "/public/assets/img/lasanha1.jpeg", "titulo": "Fatia Servida" }
+      ]
+    },
+    {
+      "id": 102,
+      "titulo": "Torta de Limão",
+      "imagem": "/public/assets/img/torta-limao.jpg",
+      "tipo": "sobremesa",
+      "ingredientes": [
+        "1 lata de leite condensado",
+        "Suco de 2 limões",
+        "1 pacote de biscoito de maisena",
+        "Manteiga derretida"
+      ],
+      "preparo": [
+        "Triture o biscoito de maisena e misture com a manteiga até formar uma massa.",
+        "Forre uma forma de fundo removível com a massa e asse por 10 minutos a 180°C.",
+        "Misture o leite condensado com o suco de limão até formar um creme.",
+        "Espalhe o creme sobre a base assada.",
+        "Leve à geladeira por pelo menos 2 horas antes de servir."
+      ],
+      "rendimento": "6 porções",
+      "dificuldade": "Média",
+      "descricao": "Clássico para uma sobremesa simples e deliciosa",
+      "fotos": [
+        { "src": "/public/assets/img/tortalimao1.jpg", "titulo": "Recheio suculento" }
+      ]
+    },
+    {
+      "id": 103,
+      "titulo": "Coxinha de Frango",
+      "imagem": "/public/assets/img/coxinha-frango.webp",
+      "tipo": "Salgado",
+      "ingredientes": [
+        "500g de peito de frango",
+        "1 pacote de massa para coxinha",
+        "1 cebola picada",
+        "1 dente de alho picado",
+        "Óleo para fritar"
+      ],
+      "preparo": [
+        "Refogue a cebola e o alho em um pouco de óleo.",
+        "Adicione o frango desfiado e tempere a gosto.",
+        "Modele a massa da coxinha, colocando o recheio de frango dentro.",
+        "Feche as coxinhas e empane passando na farinha de rosca.",
+        "Frite em óleo quente até dourar."
+      ],
+      "rendimento": "4 porções",
+      "dificuldade": "Fácil",
+      "descricao": "Item brasileiro com recheio de frango suculento",
+      "fotos": [
+        { "src": "/public/assets/img/coxinha1.jpg", "titulo": "Coxinha pronta" }
+      ]
+    },
+    {
+      "id": 104,
+      "titulo": "Escondidinho de Carne Seca",
+      "imagem": "/public/assets/img/escondidinho-carne.jpg",
+      "tipo": "Prato principal",
+      "ingredientes": [
+        "500g de carne seca dessalgada e desfiada",
+        "600g de mandioca cozida",
+        "1 caixa de creme de leite",
+        "Queijo mussarela",
+        "Temperos a gosto"
+      ],
+      "preparo": [
+        "Amasse a mandioca ainda quente e misture com o creme de leite até formar um purê.",
+        "Refogue a carne seca com temperos a gosto.",
+        "Em um refratário, coloque uma camada de purê de mandioca, depois uma camada de carne seca e finalize com outra camada de purê.",
+        "Cubra com queijo mussarela.",
+        "Leve ao forno para gratinar até o queijo derreter e dourar."
+      ],
+      "rendimento": "8 fatias",
+      "dificuldade": "Média",
+      "descricao": "Purê cremoso de mandioca escondendo carne seca bem temperada.",
+      "fotos": [
+        { "src": "/public/assets/img/esconde1.jpg", "titulo": "Suculento" }
+      ]
+    },
+    {
+      "id": 105,
+      "titulo": "Mousse de Maracujá",
+      "imagem": "/public/assets/img/mousse-maracuja.webp",
+      "tipo": "Doce",
+      "ingredientes": [
+        "1 lata de leite condensado",
+        "1 lata de creme de leite",
+        "1 xícara de suco de maracujá concentrado"
+      ],
+      "preparo": [
+        "Bata no liquidificador o leite condensado, o creme de leite e o suco de maracujá até ficar homogêneo.",
+        "Despeje a mistura em taças individuais ou em uma travessa.",
+        "Leve à geladeira por pelo menos 2 horas até firmar.",
+        "Decore com sementes de maracujá ou calda antes de servir."
+      ],
+      "rendimento": "8 porções",
+      "dificuldade": "Fácil",
+      "descricao": "Delícia leve com maracujá e leite condensado.",
+      "fotos": [
+        { "src": "/public/assets/img/maracuja1.jpg", "titulo": "com calda em cima" }
+      ]
     }
   ]
 }
